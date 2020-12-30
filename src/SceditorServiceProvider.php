@@ -4,6 +4,7 @@ namespace DcatAdminExt\Sceditor;
 
 use Dcat\Admin\Extend\ServiceProvider;
 use Dcat\Admin\Admin;
+use Dcat\Admin\Form;
 
 class SceditorServiceProvider extends ServiceProvider
 {
@@ -23,8 +24,10 @@ class SceditorServiceProvider extends ServiceProvider
 	{
 		parent::init();
 
-		//
-		
+        Admin::booting(function () {
+            Form::extend('sceditor', \DcatAdminExt\Sceditor\Form\Sceditor::class);
+        });
+
 	}
 
 	public function settingForm()
