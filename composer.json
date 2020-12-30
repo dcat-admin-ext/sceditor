@@ -1,0 +1,31 @@
+{
+    "name": "dcat-admin-ext/sceditor",
+    "description": "sceditor编辑器",
+    "type": "library",
+    "keywords": ["dcat-admin", "extension", "sceditor"],
+    "homepage": "https://github.com/dcat-admin-ext/sceditor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "abovesky",
+            "email": "abovesky@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "dcat/laravel-admin": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DcatAdminExt\\Sceditor\\": "src/"
+        }
+    },
+    "extra": {
+        "dcat-admin": "DcatAdminExt\\Sceditor\\SceditorServiceProvider",
+        "laravel": {
+            "providers": [
+                "DcatAdminExt\\Sceditor\\SceditorServiceProvider"
+            ]
+        }
+    }
+}
